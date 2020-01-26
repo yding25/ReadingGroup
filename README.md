@@ -1,10 +1,2 @@
-> 一个纯静态站点，对初学网站设计的同学应该会有些帮助。
-
-## 涉及到的点有
-* 轮播图
-* 地图
-* 描点定位
-* 布局
-
-
-站点预览: [http://wrb.iyuxy.com](http://wrb.iyuxy.com)
+# ReadingGroup
+Information related with weekly reading group in AIR lab
