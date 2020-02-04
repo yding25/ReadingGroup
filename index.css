@@ -8,7 +8,6 @@
 body{
     font-family:'Helvetica Neue',Arial,'liberation Sans',FreeSans,'Hiragino Sans GB',sans-serif;
     background-image:url(bg.jpg);
-	transform: scale(1.2) translate(200px, 100px);
 }
 
 a{
