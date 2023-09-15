@@ -19,8 +19,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Reading group hopes to broaden the research scope of students, especially in human-robot system, 
   by discussing good new papers. This meeting will be held every week by AIR Group at SUNY Binghamton. 
   If you like discussing interesting research ideas, please join HRS Reading Group without any hesitation!.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://YoheiHayamizu.github.io/hrs-reading-group/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username: jekyll
 
