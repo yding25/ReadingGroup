@@ -8,8 +8,8 @@ description: >-
   We meet every week to discuss papers related to human robot systems. We welcome anyone
   who is interested in human robot systems.
 
-baseurl: "/hrs-reading-group" # the subpath of your site, e.g. /blog
-url: "https://YoheiHayamizu.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ReadingGroup" # the subpath of your site, e.g. /blog
+url: "https://github.com/yding25" # the base hostname & protocol for your site, e.g. http://example.com
 homepage_link: https://robotics.cs.binghamton.edu/
 github_username: bu-air-lab
 # google_analytics: UA-000000-0  # replace this string with your Google Analytics tracking ID
