@@ -1,0 +1,27 @@
+---
+layout: base
+---
+{% include posts-variables.html %}
+
+<article class="post">
+
+    <div class="post-content">
+        {% for tag in tags %}
+        <h2 id="{{ tag }}">{{ tag }}</h2>
+
+        <ul class="list-marker-none">
+            {% for post in site.posts %}
+            {% for ptag in post.tags %}
+            {% if ptag == tag %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{post.title | escape}}</a>
+                <!-- <span class="tag">{{post.date | date: "%Y/%m/%d"}}</span> -->
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+
+</article>

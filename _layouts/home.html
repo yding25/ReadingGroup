@@ -4,58 +4,32 @@ layout: base
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+  <h2 class="post-list-heading">{{ page.upcoming_list | default: "Reading List" }}</h2>
   {{ content }}
 
+  <hr>
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">{{ page.archive_list | default: "Previous Paper Reading Sessions" }}</h2>
+  <ul class="post-list">
+    {%- for post in site.posts -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%I%P %b/%d/%Y (%a)" -%}
+      <span class="post-meta post-col-wrapper">
+        <span class="post-col post-col-1">{{ post.date | date: date_format }}</span>
+        <span class="post-col post-col-2">{{ post.location | Not Provided }}</span>
+        <span class="post-col post-col-3">Leader: {{ post.leader | default: "TBD" }}</span>
+        <span class="post-col post-col-4"><a href="{{ post.url | relative_url }}">Details</a></span>
+      </span>
+      <a class="post-link" href="{{ post.link }}"> {{ post.title | escape }} </a>
+    </li>
+    {%- endfor -%}
+  </ul>
 
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
 
 </div>

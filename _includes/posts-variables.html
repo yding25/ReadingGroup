@@ -1,0 +1,34 @@
+{% comment %}
+These lists is required for tag listing.
+Example
+- tags_list = ["apple", "orange", "orange"]
+- tags = ["apple", "orange"]
+- tags_counter = [1, 2]
+{% endcomment%}
+
+{% assign tags_list = "" %}
+
+{% for post in site.posts %}
+{% for tag in post.tags%}
+{% assign tags_list = tags_list | append: tag | append: "," %}
+{% endfor %}
+{% endfor %}
+
+{% assign tags_list = tags_list | split: "," %}
+
+{% assign tags = tags_list | uniq | sort %}
+
+{% assign tags_counter = "" %}
+
+{% for tag in tags %}
+{% assign counter = 0 %}
+{% for post in site.posts %}
+{% for ptag in post.tags %}
+{% if ptag == tag %}
+{% assign counter = counter | plus: 1 %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% assign tags_counter = tags_counter | append: counter | append: "," %}
+{% endfor %}
+{% assign tags_counter = tags_counter | split: "," %}
