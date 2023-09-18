@@ -7,4 +7,10 @@ archive_list: Previous Paper Reading Sessions
 ---
 
 <!-- Upcoming papers -->
-- aaa
+-  LEAGUE: Guided Skill Learning and Abstraction for Long-Horizon Manipulation
+    - Date: 1-2 p.m., 09/18/2023
+    - Location: N09, EB
+    - Leader: Yan Ding
+    - Title: LEAGUE: Guided Skill Learning and Abstraction for Long-Horizon Manipulation
+    - Authors: Shuo Cheng, Danfei Xu
+    - [Paper Link](https://arxiv.org/abs/2210.12631)
