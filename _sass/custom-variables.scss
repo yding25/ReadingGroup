@@ -1,0 +1,32 @@
+$text-color: #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color: #2a7ae2 !default;
+
+$grey-color: #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark: darken($grey-color, 25%) !default;
+
+// Binghamton design colors
+$brand-green: #005A43 !default;
+$dark-green: #004333 !default;
+$light-green: #6cc24a !default;
+
+$bing-gray: #344 !default;
+$bing-dark-gray: #999 !default;
+$bing-light-gray: #ccc !default;
+$bing-pale-gray: #eee !default;
+
+// Override minima's default colors
+$text-color: $text-color;
+$background-color: $background-color;
+$brand-color: $brand-green;
+$grey-color: $bing-gray;
+$grey-color-light: $bing-light-gray;
+$grey-color-dark: $bing-dark-gray;
+
+a.tag {
+    color: $brand-color;
+    background-color: $bing-pale-gray;
+    border-radius: 0.5em;
+    padding: 0.2em 0.6em;
+}
