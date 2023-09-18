@@ -20,7 +20,7 @@ layout: base
       {%- assign date_format = site.minima.date_format | default: "%I%P %b/%d/%Y (%a)" -%}
       <span class="post-meta post-col-wrapper">
         <span class="post-col post-col-1">{{ post.date | date: date_format }}</span>
-        <span class="post-col post-col-2">{{ post.location | Not Provided }}</span>
+        <span class="post-col post-col-2">{{ post.location | defaulg: "Not Provided" }}</span>
         <span class="post-col post-col-3">Leader: {{ post.leader | default: "TBD" }}</span>
         <span class="post-col post-col-4"><a href="{{ post.url | relative_url }}">Details</a></span>
       </span>
